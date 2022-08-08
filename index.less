@@ -1,0 +1,241 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.book {
+  width: 50vw;
+  height: 100vh;
+  perspective: 500px;
+  position: relative;
+  float: right;
+  .paper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transition: all 2s ease-in;
+  }
+  .paper {
+    z-index: 2;
+  }
+  .paper.current + .paper {
+    z-index: 20;
+  }
+  .paper.current {
+    z-index: 40;
+  }
+  .page {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    backface-visibility: hidden;
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .page.front {
+    background: rgb(0, 177, 150);
+  }
+  .page.back {
+    background: rgb(154, 155, 154);
+    transform: rotateY(180deg);
+  }
+  .paper.flip {
+    transform: rotateY(-180deg);
+  }
+}
+
+.book1 {
+  width: 100vw;
+  height: 50vh;
+  background: #fff;
+  perspective: 500px;
+  position: relative;
+  float: right;
+  .paper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    transition: all 2s ease-in;
+  }
+  .paper {
+    z-index: 2;
+  }
+  .paper.current + .paper {
+    z-index: 20;
+  }
+  .paper.current {
+    z-index: 40;
+  }
+  .page {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 2px;
+    backface-visibility: hidden;
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .page.front {
+    background: rgb(0, 177, 150);
+  }
+  .page.back {
+    background: rgb(154, 155, 154);
+    transform: rotateX(180deg);
+  }
+  .paper.flip1 {
+    transform: rotateX(-180deg);
+  }
+}
+
+.book2 {
+  width: 50vw;
+  height: 100vh;
+  perspective: 500px;
+  position: relative;
+  //   float: right;
+  .paper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: right center;
+    transition: all 2s ease-in;
+  }
+  .paper {
+    z-index: 2;
+  }
+  .paper.current + .paper {
+    z-index: 20;
+  }
+  .paper.current {
+    z-index: 40;
+  }
+  .page {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    backface-visibility: hidden;
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .page.front {
+    background: rgb(0, 177, 150);
+  }
+  .page.back {
+    background: rgb(154, 155, 154);
+    transform: rotateY(180deg);
+  }
+  .paper.flip2 {
+    transform: rotateY(180deg);
+  }
+}
+
+.book3 {
+  width: 100vw;
+  height: 50vh;
+  background: #fff;
+  perspective: 500px;
+  position: relative;
+  .paper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    transition: all 2s ease-in;
+  }
+  .paper {
+    z-index: 2;
+  }
+  .paper.current + .paper {
+    z-index: 20;
+  }
+  .paper.current {
+    z-index: 40;
+  }
+  .page {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    backface-visibility: hidden;
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .page.front {
+    background: rgb(0, 177, 150);
+  }
+  .page.back {
+    background: rgb(154, 155, 154);
+    transform: rotateX(180deg);
+  }
+  .paper.flip3 {
+    transform: rotateX(-180deg);
+  }
+}
+
+.base {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.base1 {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.base2 {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.base3 {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.base {
+  z-index: 100;
+}
+.base1 {
+  z-index: 99;
+}
+.base2 {
+  z-index: 98;
+}
+.base3 {
+  z-index: 97;
+}
+.book-hide {
+  display: none;
+}
+.base-hide {
+  display: none;
+}

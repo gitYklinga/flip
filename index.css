@@ -1,0 +1,236 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.book {
+  width: 50vw;
+  height: 100vh;
+  perspective: 500px;
+  position: relative;
+  float: right;
+}
+.book .paper {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: left center;
+  transition: all 2s ease-in;
+}
+.book .paper {
+  z-index: 2;
+}
+.book .paper.current + .paper {
+  z-index: 20;
+}
+.book .paper.current {
+  z-index: 40;
+}
+.book .page {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  backface-visibility: hidden;
+}
+.book .page > img {
+  width: 100%;
+  height: 100%;
+}
+.book .page.front {
+  background: #00b196;
+}
+.book .page.back {
+  background: #9a9b9a;
+  transform: rotateY(180deg);
+}
+.book .paper.flip {
+  transform: rotateY(-180deg);
+}
+.book1 {
+  width: 100vw;
+  height: 50vh;
+  background: #fff;
+  perspective: 500px;
+  position: relative;
+  float: right;
+}
+.book1 .paper {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  transition: all 2s ease-in;
+}
+.book1 .paper {
+  z-index: 2;
+}
+.book1 .paper.current + .paper {
+  z-index: 20;
+}
+.book1 .paper.current {
+  z-index: 40;
+}
+.book1 .page {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 2px;
+  backface-visibility: hidden;
+}
+.book1 .page > img {
+  width: 100%;
+  height: 100%;
+}
+.book1 .page.front {
+  background: #00b196;
+}
+.book1 .page.back {
+  background: #9a9b9a;
+  transform: rotateX(180deg);
+}
+.book1 .paper.flip1 {
+  transform: rotateX(-180deg);
+}
+.book2 {
+  width: 50vw;
+  height: 100vh;
+  perspective: 500px;
+  position: relative;
+}
+.book2 .paper {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: right center;
+  transition: all 2s ease-in;
+}
+.book2 .paper {
+  z-index: 2;
+}
+.book2 .paper.current + .paper {
+  z-index: 20;
+}
+.book2 .paper.current {
+  z-index: 40;
+}
+.book2 .page {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  backface-visibility: hidden;
+}
+.book2 .page > img {
+  width: 100%;
+  height: 100%;
+}
+.book2 .page.front {
+  background: #00b196;
+}
+.book2 .page.back {
+  background: #9a9b9a;
+  transform: rotateY(180deg);
+}
+.book2 .paper.flip2 {
+  transform: rotateY(180deg);
+}
+.book3 {
+  width: 100vw;
+  height: 50vh;
+  background: #fff;
+  perspective: 500px;
+  position: relative;
+}
+.book3 .paper {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transform-origin: bottom;
+  transition: all 2s ease-in;
+}
+.book3 .paper {
+  z-index: 2;
+}
+.book3 .paper.current + .paper {
+  z-index: 20;
+}
+.book3 .paper.current {
+  z-index: 40;
+}
+.book3 .page {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  top: 0px;
+  backface-visibility: hidden;
+}
+.book3 .page > img {
+  width: 100%;
+  height: 100%;
+}
+.book3 .page.front {
+  background: #00b196;
+}
+.book3 .page.back {
+  background: #9a9b9a;
+  transform: rotateX(180deg);
+}
+.book3 .paper.flip3 {
+  transform: rotateX(-180deg);
+}
+.base {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.base1 {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.base2 {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.base3 {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+.base {
+  z-index: 100;
+}
+.base1 {
+  z-index: 99;
+}
+.base2 {
+  z-index: 98;
+}
+.base3 {
+  z-index: 97;
+}
+.book-hide {
+  display: none;
+}
+.base-hide {
+  display: none;
+}
