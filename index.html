@@ -5,76 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>flip</title>
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    <script src="./js/flip.js"></script>
-    <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./css/index.css" charset="utf-8" />
+    <!-- <script src="./js/flip.js"></script>
+    <script src="./js/index.js"></script> -->
+
   </head>
   <body>
-    <img class="base" src="./img/1.jpg" alt="">
-    <img class="base1 base-hide" src="./img/2.jpg" alt="">
-    <img class="base2 base-hide" src="./img/1.jpg" alt="">
-    <img class="base3 base-hide" src="./img/2.jpg" alt="">
+    <img class="base" src="./imgline/pic1.jpg" alt="">
+    <img class="base1 base-hide" src="./imgline/pic2.jpg" alt="">
+    <img class="base2 base-hide" src="./imgline/pic3.jpg" alt="">
+    <img class="base3 base-hide" src="./imgline/pic4.jpg" alt="">
 
     
-    <!-- <div class="book">
+    <div class="book">
       <div class="paper current flip">
-        <div class="page front"><img src="./img/t1.png" alt=""></div>
-        <div class="page back"><img src="./img/t1.png" alt=""></div>
+        <div class="page front"><img src="./imgline/p1-1.png" alt=""></div>
+        <div class="page back"><img src="./imgline/p1-1.png" alt=""></div>
       </div>
       <div class="paper">
-          <div class="page front"><img src="./img/t2.png" alt=""></div>
-          <div class="page back"><img src="./img/zz1.png" alt=""></div>
+          <div class="page front"><img src="./imgline/p1-2.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p2-1.png" alt=""></div>
       </div>
       <div class="paper">
-          <div class="page front"><img src="./img/zz2.png" alt=""></div>
-          <div class="page back"><img src="./img/zz2.png" alt=""></div>
+          <div class="page front"><img src="./imgline/p2-2.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p2-2.png" alt=""></div>
       </div>
-    </div> -->
+    </div>
 
     <div class="book1 book-hide">
       <div class="paper current flip1">
-          <div class="page back"><img src="./img/z1.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p2-4.png" alt=""></div>
       </div>
       <div class="paper">
-          <div class="page front"><img src="./img/z2.png" alt=""></div>
-          <div class="page back"><img src="./img/tt2.png" alt=""></div>
+          <div class="page front"><img src="./imgline/p2-3.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p3-4.png" alt=""></div>
       </div>
       <div class="paper">
-          <div class="page front"><img src="./img/tt1.png" alt=""></div>
+          <div class="page front"><img src="./imgline/p3-3.png" alt=""></div>
       </div>
     </div>
 
     <div class="book2 book-hide">
       <div class="paper current flip2">
-        <div class="page front"><img src="./img/t2.png" alt=""></div>
-        <div class="page back"><img src="./img/t2.png" alt=""></div>
+        <div class="page front"><img src="./imgline/p3-2.png" alt=""></div>
+        <div class="page back"><img src="./imgline/p3-2.png" alt=""></div>
       </div>
       <div class="paper">
-          <div class="page front"><img src="./img/t1.png" alt=""></div>
-          <div class="page back"><img src="./img/zz2.png" alt=""></div>
+          <div class="page front"><img src="./imgline/p3-1.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p4-2.png" alt=""></div>
       </div>
       <div class="paper">
-          <div class="page front"><img src="./img/zz1.png" alt=""></div>
-          <div class="page back"><img src="./img/zz1.png" alt=""></div>
+          <div class="page front"><img src="./imgline/p4-1.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p4-1.png" alt=""></div>
       </div>
     </div>
 
     <div class="book3 book-hide">
       <div class="paper flip3">
-        <div class="page front"><img src="./img/z2.png" alt=""></div>
-        <div class="page back"><img src="./img/tt2.png" alt=""></div>
+        <div class="page front"><img src="./imgline/p5-3.png" alt=""></div>
+        <div class="page back"><img src="./imgline/p5-4.png" alt=""></div>
       </div>
       <div class="paper current flip3">
-          <div class="page front"><img src="./img/tt1.png" alt=""></div>
-          <div class="page back"><img src="./img/z1.png" alt=""></div>
+          <div class="page front"><img src="./imgline/p5-3.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p4-4.png" alt=""></div>
       </div>
       <div class="paper">
-          <div class="page front"><img src="./img/z2.png" alt=""></div>
-          <div class="page back"><img src="./img/z1.png" alt=""></div>
+          <div class="page front"><img src="./imgline/p4-3.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p4-3.png" alt=""></div>
       </div>
     </div>
 
-    <!-- <script>
+    <script>
     window.onload = function () {
       var current = 1;
       var current1 = 1;
@@ -98,7 +99,7 @@
         el.classList.add('base-hide')
         book.click();
         setTimeout(() => {
-          el.src ="./img/2.jpg" 
+          el.src ="./imgline/pic2.jpg" 
           book.classList.add('book-hide')
           base1.classList.remove('base-hide')
           book1.classList.remove('book-hide')
@@ -111,7 +112,7 @@
         book1.click();
         console.log('base1 click');
         setTimeout(() => {
-          el.src ="./img/1.jpg" 
+          el.src ="./imgline/pic3.jpg" 
           book1.classList.add('book-hide')
           base2.classList.remove('base-hide')   
           book2.classList.remove('book-hide')
@@ -123,7 +124,7 @@
         el.classList.add('base-hide')
         book2.click();
         setTimeout(() => {
-          el.src ="./img/2.jpg" 
+          el.src ="./imgline/pic4.jpg" 
           book2.classList.add('book-hide')
           base3.classList.remove('base-hide')   
           book3.classList.remove('book-hide')
@@ -136,7 +137,7 @@
         el.classList.add('base-hide')
         book3.click();
         setTimeout(() => {
-          el.src ="./img/1.jpg" 
+          el.src ="./imgline/pic5.jpg" 
           book3.classList.add('book-hide')
           el.classList.remove('base-hide')
         }, 2000);
@@ -208,6 +209,6 @@
       });
     }
 
-    </script> -->
+    </script>
   </body>
 </html>
