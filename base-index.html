@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flip</title>
+    <link rel="stylesheet" crossorigin="anonymous" href="./css/index.css" charset="utf-8" />
+    <script src="./js/flip.js"></script>
+    <script src="./js/index.js"></script>
+
+  </head>
+  <body>
+    <img class="base" src="./imgline/pic1.jpg" alt="">
+    <img class="base1 base-hide" src="./imgline/pic2.jpg" alt="">
+    <img class="base2 base-hide" src="./imgline/pic3.jpg" alt="">
+    <img class="base3 base-hide" src="./imgline/pic4.jpg" alt="">
+    <img class="base4 base-hide" src="./imgline/pic5.jpg" alt="">
+
+    <!-- <div class="book">
+      <div class="paper current flip">
+        <div class="page front"><img src="./imgline/p1-1.png" alt=""></div>
+        <div class="page back"><img src="./imgline/p1-1.png" alt=""></div>
+      </div>
+      <div class="paper">
+          <div class="page front"><img src="./imgline/p1-2.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p2-1.png" alt=""></div>
+      </div>
+      <div class="paper">
+          <div class="page front"><img src="./imgline/p2-2.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p2-2.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="book1 book-hide">
+      <div class="paper current flip1">
+          <div class="page back"><img src="./imgline/p2-4.png" alt=""></div>
+      </div>
+      <div class="paper">
+          <div class="page front"><img src="./imgline/p2-3.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p3-4.png" alt=""></div>
+      </div>
+      <div class="paper">
+          <div class="page front"><img src="./imgline/p3-3.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="book2 book-hide">
+      <div class="paper current flip2">
+        <div class="page front"><img src="./imgline/p3-2.png" alt=""></div>
+        <div class="page back"><img src="./imgline/p3-2.png" alt=""></div>
+      </div>
+      <div class="paper">
+          <div class="page front"><img src="./imgline/p3-1.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p4-2.png" alt=""></div>
+      </div>
+      <div class="paper">
+          <div class="page front"><img src="./imgline/p4-1.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p4-1.png" alt=""></div>
+      </div>
+    </div>
+
+    <div class="book3 book-hide">
+      <div class="paper flip3">
+        <div class="page front"><img src="./imgline/p5-3.png" alt=""></div>
+        <div class="page back"><img src="./imgline/p5-4.png" alt=""></div>
+      </div>
+      <div class="paper current flip3">
+          <div class="page front"><img src="./imgline/p5-3.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p4-4.png" alt=""></div>
+      </div>
+      <div class="paper">
+          <div class="page front"><img src="./imgline/p4-3.png" alt=""></div>
+          <div class="page back"><img src="./imgline/p4-3.png" alt=""></div>
+      </div>
+    </div> -->
+
+    <!-- <script>
+    window.onload = function () {
+      var current = 1;
+      var current1 = 1;
+      var current2 = 1;
+      var current3 = 1;
+
+      var base = document.querySelector('.base')
+      var base1 = document.querySelector('.base1')
+      var base2 = document.querySelector('.base2')
+      var base3 = document.querySelector('.base3')
+
+
+      var book = document.querySelector('.book')
+      var book1 = document.querySelector('.book1')
+      var book2 = document.querySelector('.book2')
+      var book3 = document.querySelector('.book3')
+
+      
+      base.addEventListener('click', function () {
+        var el = this;
+        el.classList.add('base-hide')
+        book.click();
+        setTimeout(() => {
+          el.src ="./imgline/pic2.jpg" 
+          book.classList.add('book-hide')
+          base1.classList.remove('base-hide')
+          book1.classList.remove('book-hide')
+        }, 2000);
+      })
+
+      base1.addEventListener('click', function () {
+        var el = this;
+        el.classList.add('base-hide')
+        book1.click();
+        console.log('base1 click');
+        setTimeout(() => {
+          el.src ="./imgline/pic3.jpg" 
+          book1.classList.add('book-hide')
+          base2.classList.remove('base-hide')   
+          book2.classList.remove('book-hide')
+        }, 2000);
+      })
+
+      base2.addEventListener('click', function () {
+        var el = this;
+        el.classList.add('base-hide')
+        book2.click();
+        setTimeout(() => {
+          el.src ="./imgline/pic4.jpg" 
+          book2.classList.add('book-hide')
+          base3.classList.remove('base-hide')   
+          book3.classList.remove('book-hide')
+        }, 2000);
+      })
+
+      base3.addEventListener('click', function () {
+        if (current3 !== 1) return // 结束
+        var el = this;
+        el.classList.add('base-hide')
+        book3.click();
+        setTimeout(() => {
+          el.src ="./imgline/pic5.jpg" 
+          book3.classList.add('book-hide')
+          el.classList.remove('base-hide')
+        }, 2000);
+      })
+      
+      book.addEventListener('click', function () {
+          var element = this;
+          var papers = this.querySelectorAll('.paper');
+          var curentPapper = papers[current];
+          curentPapper.classList.add('current');
+          curentPapper.classList.add('flip');
+
+          Array.from(papers).forEach(function (paper, index) {
+              if (index !== current) {
+                  paper.classList.remove('current');
+              }
+          });
+
+          current += 1;
+      });
+
+      book1.addEventListener('click', function () {
+          var element = this;
+          var papers = this.querySelectorAll('.paper');
+          var curentPapper = papers[current1];
+          curentPapper.classList.add('current');
+          curentPapper.classList.add('flip1');
+
+          Array.from(papers).forEach(function (paper, index) {
+              if (index !== current1) {
+                  paper.classList.remove('current');
+              }
+          });
+
+          current1 += 1;
+      });
+
+      book2.addEventListener('click', function () {
+          var element = this;
+          var papers = this.querySelectorAll('.paper');
+          var curentPapper = papers[current2];
+          curentPapper.classList.add('current');
+          curentPapper.classList.add('flip2');
+
+          Array.from(papers).forEach(function (paper, index) {
+              if (index !== current2) {
+                  paper.classList.remove('current');
+              }
+          });
+
+          current2 += 1;
+      });
+
+      // 回退翻页
+      book3.addEventListener('click', function () {
+          var element = this;
+          var papers = this.querySelectorAll('.paper');
+          var curentPapper = papers[current3];
+          curentPapper.classList.add('current');
+          curentPapper.classList.remove('flip3');
+
+          Array.from(papers).forEach(function (paper, index) {
+              if (index !== current3) {
+                  paper.classList.remove('current');
+              }
+          });
+
+          current3 -= 1;
+      });
+    }
+
+    </script> -->
+  </body>
+</html>
